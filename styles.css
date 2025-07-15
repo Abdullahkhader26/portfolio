@@ -150,6 +150,19 @@ footer {
     border-radius: 2rem 2rem 0 0;
     min-height: unset;
   }
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  .row.g-4 > [class^="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  main {
+    padding: 2rem 1rem !important;
+  }
+  h3, h4, h5 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -162,6 +175,26 @@ footer {
     padding: 2rem 1rem;
   }
   main {
-    padding: 2rem 1rem !important;
+    padding: 1rem 0.5rem !important;
   }
+  h3, h4, h5 {
+    font-size: 1rem;
+  }
+  .sidebar img, .card img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
+img, .sidebar img, .card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card img {
+  object-fit: contain;
+  background: #fff;
 } 
