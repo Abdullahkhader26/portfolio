@@ -1,7 +1,7 @@
 body {
-  background: #f6f8fb;
+  background: #0f0f0f !important;
+  color: #ffffff !important;
   font-family: 'Cairo', Arial, sans-serif;
-  color: #222;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -16,8 +16,11 @@ body {
 }
 
 .main-content {
+  background: #0f0f0f !important;
+  color: #ffffff !important;
   position: relative;
   z-index: 1;
+  padding: 2rem 0;
 }
 
 .sidebar {
@@ -93,15 +96,19 @@ body {
 }
 
 .card {
+  background: #1f1f1f !important;
+  border: 1px solid #333 !important;
+  color: #ffffff !important;
   border-radius: 1.5rem;
-  box-shadow: 0 2px 16px rgba(63,81,181,0.07);
-  border: none;
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 2rem;
+  min-height: 300px;
 }
 
 .card:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 6px 24px rgba(63,81,181,0.13);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
 
 main h3, main h4, main h5 {
@@ -109,10 +116,10 @@ main h3, main h4, main h5 {
 }
 
 .bg-gradient-primary, .badge.bg-gradient-primary {
-  background: linear-gradient(90deg, #3f51b5 0%, #5c6bc0 100%) !important;
-  color: #fff !important;
+  background: linear-gradient(90deg, #374151 0%, #6b7280 100%) !important;
+  color: #ffffff !important;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(63,81,181,0.08);
+  box-shadow: 0 2px 8px rgba(107,114,128,0.3);
   border: none;
 }
 
@@ -122,15 +129,15 @@ main h3, main h4, main h5 {
 }
 
 .text-primary, .navbar-brand.text-primary, .sidebar .text-primary {
-  color: #3f51b5 !important;
+  color: #9ca3af !important;
 }
 
 footer {
-  background: #3f51b5;
-  color: #fff;
+  background: #000 !important;
+  color: #ffffff !important;
   font-size: 1.05rem;
   letter-spacing: 0.5px;
-  box-shadow: 0 -2px 16px rgba(63,81,181,0.08);
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.3);
 }
 
 ::-webkit-scrollbar {
@@ -140,50 +147,6 @@ footer {
 ::-webkit-scrollbar-thumb {
   background: #c5cae9;
   border-radius: 1em;
-}
-
-@media (max-width: 991px) {
-  .main-content {
-    border-radius: 2rem;
-  }
-  .sidebar {
-    border-radius: 2rem 2rem 0 0;
-    min-height: unset;
-  }
-  .card {
-    margin-bottom: 1.5rem;
-  }
-  .row.g-4 > [class^="col-"] {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  main {
-    padding: 2rem 1rem !important;
-  }
-  h3, h4, h5 {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .main-content {
-    border-radius: 1.2rem;
-    padding: 0 !important;
-  }
-  .sidebar {
-    border-radius: 1.2rem 1.2rem 0 0;
-    padding: 2rem 1rem;
-  }
-  main {
-    padding: 1rem 0.5rem !important;
-  }
-  h3, h4, h5 {
-    font-size: 1rem;
-  }
-  .sidebar img, .card img {
-    width: 80px !important;
-    height: 80px !important;
-  }
 }
 
 img, .sidebar img, .card img {
@@ -197,4 +160,268 @@ img, .sidebar img, .card img {
 .card img {
   object-fit: contain;
   background: #fff;
+}
+
+.bg-dark-hero {
+  background: #000;
+  min-height: 70vh;
+  width: 100vw;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 2rem;
+}
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 60vh;
+  padding: 3rem 2rem 2rem 2rem;
+}
+.hero-text {
+  flex: 2 1 0;
+  max-width: 65%;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.hero-text h4 {
+  font-size: 1.5rem;
+  font-family: 'Cairo', Arial, sans-serif;
+  font-weight: 400;
+  opacity: 0.85;
+}
+.hero-img {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 50%;
+}
+.hero-profile-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 12px rgba(63,81,181,0.08);
+}
+.hero-img .hero-profile-img {
+  width: 320px;
+  height: 320px;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+  filter: grayscale(30%);
+}
+@media (max-width: 991px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 2rem 0.5rem 1rem 0.5rem;
+  }
+  .hero-text, .hero-img {
+    max-width: 100%;
+  }
+  .hero-img .hero-profile-img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1.5rem;
+  }
+}
+nav.navbar.custom-navbar, .custom-navbar, .custom-navbar.navbar, .custom-navbar.bg-white, .custom-navbar.bg-light, .custom-navbar.navbar-light, .custom-navbar.navbar-dark {
+  background: #000 !important;
+  background-color: #000 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+.custom-navbar .navbar-brand {
+  color: #ffffff !important;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.custom-navbar .nav-link {
+  color: #e5e7eb !important;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+  transition: border-bottom 0.2s;
+  border-radius: 0;
+  padding: 0.5rem 1.2rem;
+  border-bottom: 2px solid transparent;
+}
+.custom-navbar .nav-link.active, .custom-navbar .nav-link:focus, .custom-navbar .nav-link:hover {
+  color: #ffffff !important;
+  background: transparent !important;
+  border-bottom: 2px solid #9ca3af;
+}
+.custom-navbar .btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+.custom-navbar .btn-outline-light:hover {
+  background: #fff;
+  color: #111;
+}
+.custom-navbar .navbar-toggler {
+  border-color: #fff;
+}
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.main-content .row.g-0 > main.col-12 {
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
+} 
+
+.spa-section {
+  background: #1a1a1a;
+  border-radius: 1.5rem;
+  padding: 3.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  border-left: 6px solid #6b7280;
+  min-height: 400px;
+}
+
+.spa-section h3 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #6b7280;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.spa-section p {
+  color: #e5e7eb;
+  line-height: 1.9;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.card h5, .card h6 {
+  color: #ffffff !important;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.card p, .card li {
+  color: #e5e7eb !important;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.text-muted {
+  color: #9ca3af !important;
+}
+
+.text-secondary {
+  color: #9ca3af !important;
+}
+
+.badge.bg-gradient-primary {
+  background: linear-gradient(90deg, #374151 0%, #6b7280 100%) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(107,114,128,0.4);
+  border: none;
+  margin: 0.5rem;
+}
+
+.text-primary {
+  color: #9ca3af !important;
+}
+
+.bi {
+  color: #9ca3af;
+} 
+
+.hero-text h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero-text .text-secondary {
+  color: #9ca3af !important;
+}
+
+.hero-text .text-white-50 {
+  color: #9ca3af !important;
+}
+
+.hero-text a {
+  color: #9ca3af !important;
+  transition: color 0.2s;
+}
+
+.hero-text a:hover {
+  color: #d1d5db !important;
+} 
+
+main.col-12 {
+  padding: 2rem 3rem !important;
+}
+
+@media (max-width: 768px) {
+  .spa-section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .spa-section h3 {
+    font-size: 2rem;
+  }
+  
+  main.col-12 {
+    padding: 1rem 1.5rem !important;
+  }
+} 
+
+/* إزالة الخط السفلي أو أي ظل من العناوين داخل أقسام السيرة الذاتية */
+.spa-section h3,
+.spa-section h3::after,
+.spa-section h3::before {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  content: none !important;
+  background: none !important;
+} 
+
+/* إزالة جميع الظلال والحدود من الحاويات والمحتوى */
+.card,
+.spa-section,
+.main-content,
+div,
+section,
+main {
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  background-image: none !important;
+} 
+
+/* تثبيت الشريط العلوي في الأعلى */
+.navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 999;
+  transition: top 0.4s;
+}
+
+/* كلاس لإخفاء الشريط العلوي */
+.navbar.hide-navbar {
+  top: -80px;
 } 
