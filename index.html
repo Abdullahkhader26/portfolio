@@ -70,11 +70,15 @@
       border-radius: 6px;
       color: #ffffff !important;
     }
+    /* ضمان ظهور الشريط العلوي دائمًا فوق كل العناصر */
+    .navbar.fixed-top {
+      z-index: 1050 !important;
+    }
   </style>
 </head>
 <body>
   <div class="bg-dark-hero">
-    <nav class="navbar navbar-expand-lg custom-navbar">
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand fw-bold text-white" href="#about">Abdallah Khader</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,7 +96,7 @@
         </div>
       </div>
     </nav>
-    <section class="hero-section d-flex align-items-center justify-content-between" style="max-width: 1100px; margin: 0 auto; min-height: 70vh;">
+    <section class="hero-section d-flex align-items-center justify-content-between" style="width: 100%; height: 80vh; min-height: 80vh; margin-top: 70px;">
       <div class="hero-text text-white">
         <h2 class="fw-bold mb-2" style="font-family: 'Montserrat', sans-serif;">Abdallah Khader</h2>
         <div class="mb-3 text-secondary">Computer Science Student | .NET Developer</div>
@@ -112,7 +116,7 @@
       </div>
     </section>
   </div>
-  <div class="main-content bg-white p-0 w-100" style="min-height: 100vh; overflow: hidden; margin-top: -60px;">
+  <div class="main-content bg-white p-0 w-100" style="min-height: 100vh; overflow: hidden; margin-top: 0;">
     <div class="row g-0">
       <main class="col-12 p-5">
         <section id="about" class="spa-section mb-5" data-aos="fade-up">
@@ -139,52 +143,73 @@
         </section>
         <section id="education" class="spa-section mb-5" data-aos="fade-up">
           <h3 class="fw-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Education</h3>
-          <div class="row g-4">
-            <div class="col-md-6 text-center">
-              <img src="hu-logo.jpg" alt="HU Logo" width="60" height="60" class="rounded mb-3">
-              <h5 class="fw-bold mb-2">BSc in Computer Science and its Applications</h5>
-              <span class="badge bg-gradient-primary mb-2 fs-6 px-3 py-2">The Hashemite University</span>
-              <div class="small text-muted">GPA: 3.1</div>
-              <div class="small text-muted">10/2022 - Expected 1/2026</div>
-            </div>
-            <div class="col-md-6 text-center">
-              <img src="school.jpg" alt="School Logo" width="60" height="60" class="rounded mb-3">
-              <h5 class="fw-bold mb-2">Tawjihi (High School)</h5>
-              <span class="badge bg-gradient-primary mb-2 fs-6 px-3 py-2">Arsalan High School</span>
-              <div class="small text-muted">Average: 91.5</div>
-              <div class="small text-muted">Graduated: 2022</div>
+          <div class="cv-section-card">
+            <div class="row g-4">
+              <div class="col-md-6 text-center">
+                <img src="hu-logo.jpg" alt="HU Logo" width="60" height="60" class="rounded mb-3">
+                <h5 class="fw-bold mb-2">BSc in Computer Science and its Applications</h5>
+                <span class="badge bg-gradient-primary mb-2 fs-6 px-3 py-2">The Hashemite University</span>
+                <div class="small text-muted">GPA: 3.1</div>
+                <div class="small text-muted">10/2022 - Expected 1/2026</div>
+              </div>
+              <div class="col-md-6 text-center">
+                <img src="school.jpg" alt="School Logo" width="60" height="60" class="rounded mb-3">
+                <h5 class="fw-bold mb-2">Tawjihi (High School)</h5>
+                <span class="badge bg-gradient-primary mb-2 fs-6 px-3 py-2">Arsalan High School</span>
+                <div class="small text-muted">Average: 91.5</div>
+                <div class="small text-muted">Graduated: 2022</div>
+              </div>
             </div>
           </div>
         </section>
         <section id="experience" class="spa-section mb-5" data-aos="fade-up">
           <h3 class="fw-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Experience</h3>
-          <div class="row g-4">
-            <div class="col-md-6 text-center">
-              <img src="uniflix.png" alt="Uniflix Logo" width="90" height="90" class="rounded mb-3">
-              <h5 class="fw-bold mb-2">Marketing Leader & Core Team Member</h5>
-              <span class="badge bg-gradient-primary mb-2 fs-6 px-3 py-2">Uniflix HU</span>
-              <div class="small text-muted">Feb 2024 - Nov 2024</div>
-              <ul class="small mb-0">
-                <li class="mb-2">Led two teams in marketing and media, organized events, and built partnerships to strengthen brand presence.</li>
-              </ul>
+          <div class="cv-section-card">
+            <div class="row g-4">
+              <div class="col-md-6 text-center">
+                <img src="uniflix.png" alt="Uniflix Logo" width="90" height="90" class="rounded mb-3">
+                <h5 class="fw-bold mb-2">Marketing Leader & Core Team Member</h5>
+                <span class="badge bg-gradient-primary mb-2 fs-6 px-3 py-2">Uniflix HU</span>
+                <div class="small text-muted">Feb 2024 - Nov 2024</div>
+                <ul class="small mb-0">
+                  <li class="mb-2">Led two teams in marketing and media, organized events, and built partnerships to strengthen brand presence.</li>
+                </ul>
+              </div>
+              <div class="col-md-6 text-center">
+                <i class="bi bi-headset fs-1 text-primary mb-3"></i>
+                <h5 class="fw-bold mb-2">Customer Service Agent</h5>
+                <span class="badge bg-gradient-primary mb-2 fs-6 px-3 py-2">Extensya (on behalf of Talabat)</span>
+                <div class="small text-muted">Jun 2023 - Sep 2023</div>
+                <ul class="small mb-0">
+                  <li class="mb-2">Resolved partner issues via phone and provided real-time support to ensure customer satisfaction and smooth operations.</li>
+                </ul>
+              </div>
+              <div class="col-md-6 text-center">
+                <i class="bi bi-pc-display fs-1 text-primary mb-3"></i>
+                <h5 class="fw-bold mb-2">IT System and Support Engineer (Intern)</h5>
+                <span class="badge bg-gradient-primary mb-2 fs-6 px-3 py-2">Danish Jordanian Dairy</span>
+                <div class="small text-muted">Internship</div>
+                <ul class="small mb-0">
+                  <li class="mb-2">Provided IT support, maintained systems, and contributed to the development of the company’s technical infrastructure.</li>
+                </ul>
+              </div>
             </div>
-            <div class="col-md-6 text-center">
-              <i class="bi bi-headset fs-1 text-primary mb-3"></i>
-              <h5 class="fw-bold mb-2">Customer Service Agent</h5>
-              <span class="badge bg-gradient-primary mb-2 fs-6 px-3 py-2">Extensya (on behalf of Talabat)</span>
-              <div class="small text-muted">Jun 2023 - Sep 2023</div>
-              <ul class="small mb-0">
-                <li class="mb-2">Resolved partner issues via phone and provided real-time support to ensure customer satisfaction and smooth operations.</li>
-              </ul>
-            </div>
-            <div class="col-md-6 text-center">
-              <i class="bi bi-pc-display fs-1 text-primary mb-3"></i>
-              <h5 class="fw-bold mb-2">IT System and Support Engineer (Intern)</h5>
-              <span class="badge bg-gradient-primary mb-2 fs-6 px-3 py-2">Danish Jordanian Dairy</span>
-              <div class="small text-muted">Internship</div>
-              <ul class="small mb-0">
-                <li class="mb-2">Provided IT support, maintained systems, and contributed to the development of the company’s technical infrastructure.</li>
-              </ul>
+          </div>
+        </section>
+        <section id="projects" class="spa-section mb-5" data-aos="fade-up">
+          <h3 class="fw-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Projects</h3>
+          <div class="cv-section-card">
+            <div class="row g-4">
+              <div class="col-md-6 text-center">
+                <i class="bi bi-lightbulb fs-1 text-primary mb-3"></i>
+                <h5 class="fw-bold mb-2">ADHD Web Application</h5>
+                <p class="text-secondary mb-0">A university project built using .NET Core MVC to help students with ADHD manage their study sessions and tasks more effectively.</p>
+              </div>
+              <div class="col-md-6 text-center">
+                <i class="bi bi-clock fs-1 text-primary mb-3"></i>
+                <h5 class="fw-bold mb-2">Coming Soon...</h5>
+                <p class="text-secondary mb-0">More exciting projects are in development.</p>
+              </div>
             </div>
           </div>
         </section>
@@ -220,21 +245,6 @@
                 <span class="badge bg-gradient-primary fs-6 px-3 py-2">Adaptability</span>
                 <span class="badge bg-gradient-primary fs-6 px-3 py-2">Leadership</span>
               </div>
-            </div>
-          </div>
-        </section>
-        <section id="projects" class="spa-section mb-5" data-aos="fade-up">
-          <h3 class="fw-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Projects</h3>
-          <div class="row g-4">
-            <div class="col-md-6 text-center">
-              <i class="bi bi-lightbulb fs-1 text-primary mb-3"></i>
-              <h5 class="fw-bold mb-2">ADHD Web Application</h5>
-              <p class="text-secondary mb-0">A university project built using .NET Core MVC to help students with ADHD manage their study sessions and tasks more effectively.</p>
-            </div>
-            <div class="col-md-6 text-center">
-              <i class="bi bi-clock fs-1 text-primary mb-3"></i>
-              <h5 class="fw-bold mb-2">Coming Soon...</h5>
-              <p class="text-secondary mb-0">More exciting projects are in development.</p>
             </div>
           </div>
         </section>
@@ -302,24 +312,6 @@
         }
       }
     });
-    // إظهار/إخفاء الشريط العلوي عند التمرير بشكل احترافي
-    let lastScrollTop = 0;
-    let lastShowScroll = 0;
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', function() {
-      let st = window.pageYOffset || document.documentElement.scrollTop;
-      // إخفاء الشريط عند التمرير للأسفل بعد 100px
-      if (st > lastScrollTop && st > 100) {
-        navbar.classList.add('hide-navbar');
-        lastShowScroll = st;
-      }
-      // إظهار الشريط فقط إذا تم التمرير للأعلى بمقدار 30px أو أكثر
-      else if (st < lastScrollTop && (lastShowScroll - st > 30 || st <= 0)) {
-        navbar.classList.remove('hide-navbar');
-        lastShowScroll = st;
-      }
-      lastScrollTop = st <= 0 ? 0 : st;
-    }, false);
   </script>
 </body>
 </html>

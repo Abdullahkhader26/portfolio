@@ -425,3 +425,149 @@ main {
 .navbar.hide-navbar {
   top: -80px;
 } 
+
+/* --- Hover Effects for Cards, Badges, and Buttons --- */
+.card:hover, .card:focus {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+  z-index: 2;
+}
+
+.badge:hover, .badge:focus {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(42,82,152,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.btn, .btn:focus {
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px rgba(42,82,152,0.18);
+}
+
+/* --- Responsive Profile Image and Headings --- */
+.hero-profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(42,82,152,0.18);
+  border: 4px solid #2a5298;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+@media (max-width: 991px) {
+  .hero-section {
+    flex-direction: column !important;
+    text-align: center;
+    height: auto !important;
+    min-height: unset !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .hero-img {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .hero-profile-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .hero-profile-img {
+    width: 110px;
+    height: 110px;
+  }
+  .hero-text h2 {
+    font-size: 1.3rem;
+  }
+  .spa-section h3 {
+    font-size: 1.2rem;
+  }
+} 
+
+/* --- CV Section Card Hover Effect --- */
+.cv-section-card {
+  background: #23272b;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(42,82,152,0.07);
+  padding: 32px 18px 24px 18px;
+  margin-bottom: 8px;
+  transition: transform 0.22s, box-shadow 0.22s, background 0.22s;
+  position: relative;
+}
+.cv-section-card:hover, .cv-section-card:focus {
+  transform: scale(1.035);
+  box-shadow: 0 8px 32px rgba(42,82,152,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+  background: #283046;
+  z-index: 3;
+}
+
+@media (max-width: 991px) {
+  .cv-section-card {
+    padding: 20px 8px 16px 8px;
+  }
+} 
+
+/* --- CV Sections Grid Layout --- */
+.cv-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-bottom: 24px;
+}
+
+.cv-section-card {
+  background: #23272b;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(42,82,152,0.07);
+  padding: 32px 18px 24px 18px;
+  margin-bottom: 0;
+  transition: transform 0.22s, box-shadow 0.22s, background 0.22s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 180px;
+}
+.cv-section-card:hover, .cv-section-card:focus {
+  transform: scale(1.035);
+  box-shadow: 0 8px 32px rgba(42,82,152,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+  background: #283046;
+  z-index: 3;
+}
+.cv-section-card h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.cv-section-card .small, .cv-section-card p, .cv-section-card ul, .cv-section-card span {
+  color: #b0b0b0 !important;
+  font-size: 0.97rem;
+}
+.cv-section-card img, .cv-section-card i {
+  margin-bottom: 12px;
+  align-self: center;
+}
+.cv-section-card ul {
+  padding-left: 18px;
+}
+@media (max-width: 575px) {
+  .cv-section-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .cv-section-card {
+    padding: 18px 8px 14px 8px;
+    min-height: 120px;
+  }
+} 
